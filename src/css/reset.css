@@ -1,4 +1,16 @@
 /* Reset styles */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -21,7 +33,6 @@ ul {
 
 a {
   color: currentColor;
-  text-decoration: none;
 }
 
 button {
@@ -32,4 +43,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+::marker {
+  content: initial;
 }
