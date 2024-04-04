@@ -1,0 +1,81 @@
+<div class="cv-forms">
+  <div class="sidebar-forms">
+    <form class="tech-skills-form js-tech-form">
+      <label>Tech Skills</label>
+      <div class="js-tech-inputs-container" data-skill="tech"></div>
+      <button type="button" class="js-skills-btn">Add Skill</button>
+    </form>
+
+    <form class="soft-skills-form js-soft-form">
+      <label>Soft Skills</label>
+      <div class="js-soft-inputs-container" data-skill="soft"></div>
+    </form>
+
+    <form class="languages-skills-form js-languages-form">
+      <label>Languages Skills</label>
+      <div class="js-languages-inputs-container" data-skill="languages"></div>
+    </form>
+  </div>
+
+  <div class="main-forms">
+    <form class="job-name-form">
+      <label for="job-name-input" class="job-name-label">Job Name</label>
+      <input
+        type="text"
+        class="job-name-input"
+        name="jobName"
+        id="job-name-input"
+        placeholder="Enter job name"
+      />
+    </form>
+
+    <form class="summary-form">
+      <label for="summary-select" class="summury-label">Summary</label>
+      <select name="summarySelect" id="summary-select" class="summary-input">
+        <option value="fullstack">Fullstack</option>
+        <option value="frontend" selected>Frontend</option>
+        <option value="backend" disabled>Backend</option>
+      </select>
+    </form>
+
+    <form class="projects-form">
+      <label class="project-label">Projects</label>
+
+      <select
+        name="projectList"
+        class="project-input js-project-select js-first"
+      ></select>
+
+      <select
+        name="projectList"
+        class="project-input js-project-select js-second"
+      ></select>
+
+      <select
+        name="projectList"
+        class="project-input js-project-select js-third"
+      ></select>
+
+      <select
+        name="projectList"
+        class="project-input js-project-select js-fourth"
+      ></select>
+
+      <select
+        name="projectList"
+        class="project-input js-project-select js-fifth"
+      ></select>
+    </form>
+
+    <form class="color-form">
+      <label for="color-input" class="color-label">Accent Color</label>
+      <input
+        type="color"
+        name="accentColor"
+        id="color-picker"
+        class="color-picker"
+        value="#2e3440"
+      />
+    </form>
+  </div>
+</div>
