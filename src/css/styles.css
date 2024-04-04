@@ -5,35 +5,42 @@
   |============================
 */
 
-/* * {
-  size: -1.34%
-  font-size: 13.6px
-  font-size: 10px
-  font-size: 0.625rem
-} */
-
 @import url('./reset.css');
 @import url('./cv.css');
+@import url('./form.css');
 
 :root {
+  --primary-color: #f78a0f;
   --text-color: #737373;
   --title-color: #241d19;
   --main-title-color: #797576;
-
-  --bg-color: #fff;
+  --bg-cv-color: #fff;
+  --bg-color: #f3f3f3;
 
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 10px;
   line-height: 1.25rem;
   letter-spacing: 0.02rem;
   font-weight: 400;
-
-  color: var(--text-color);
-  background-color: var(--bg-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100vw;
+  height: 100vh;
+
+  overflow: auto;
+  padding: 20px 15px;
 }

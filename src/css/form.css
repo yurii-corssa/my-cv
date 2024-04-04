@@ -1,0 +1,37 @@
+.cv-forms {
+  display: flex;
+  justify-content: space-around;
+
+  padding: 20px;
+}
+
+.sidebar-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.job-name-input,
+.summary-input,
+.project-input {
+  display: block;
+  width: 100%;
+}
+
+.project-label {
+  display: block;
+}
+
+.skill-items {
+  display: block;
+}
+
+.input-wrapper {
+  display: flex;
+}
