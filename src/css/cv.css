@@ -1,3 +1,11 @@
+a {
+  transition: color 250ms ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
 .section {
   margin-bottom: 1.3rem;
 }
@@ -12,6 +20,12 @@
   margin-bottom: 0.5rem;
 }
 
+.cv {
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
+}
+
 .printable-cv {
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -23,6 +37,7 @@
   margin: 0 auto;
   padding: 2rem;
 
+  background-color: var(--bg-cv-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   overflow: hidden;
@@ -40,7 +55,7 @@
   right: 0;
   width: 0.08rem;
   height: 100%;
-  background-color: currentColor;
+  background-color: var(--primary-color);
   opacity: 0.6;
   border-radius: 0.04rem;
 }
@@ -80,7 +95,7 @@
   width: 1rem;
   height: 1rem;
 
-  fill: currentColor;
+  fill: var(--primary-color);
 }
 
 .contacts-list-text {
@@ -88,13 +103,23 @@
   color: var(--text-color);
 }
 
-.skills-list {
-  list-style: disc;
+.skill-list-item {
+  position: relative;
   padding-left: 1.2rem;
+  text-wrap: nowrap;
 }
 
-.skill-list-item {
-  text-wrap: nowrap;
+.skill-list-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  width: 0.3rem;
+  aspect-ratio: 1 / 1;
+
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: var(--primary-color);
 }
 
 .main-content {
@@ -106,13 +131,13 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: var(--main-title-color);
+  color: var(--primary-color);
   margin-bottom: 1.3rem;
   line-height: 1.5rem;
 }
 
 .secondary-title {
-  text-transform: none;
+  text-transform: capitalize;
   margin: 0;
 }
 
@@ -126,7 +151,13 @@
 }
 
 .project-links:first-child {
+  color: var(--primary-color);
   font-weight: 600;
+  transition: filter 250ms ease;
+}
+
+.project-links:first-child:hover {
+  filter: brightness(90%);
 }
 
 .desc-text {
@@ -134,11 +165,13 @@
 }
 
 .subtitle {
+  color: var(--primary-color);
   font-size: inherit;
   font-weight: 600;
 }
 
 .period {
+  color: var(--text-color);
   font-size: 0.8em;
   font-style: italic;
 }

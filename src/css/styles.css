@@ -18,7 +18,7 @@
   --bg-color: #f3f3f3;
 
   font-family: 'Open Sans', sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   line-height: 1.25rem;
   letter-spacing: 0.02rem;
   font-weight: 400;
@@ -37,10 +37,9 @@ body {
 
 .main {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 40% 60%;
   width: 100vw;
   height: 100vh;
 
-  overflow: auto;
   padding: 20px 15px;
 }
