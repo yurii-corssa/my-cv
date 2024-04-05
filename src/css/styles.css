@@ -10,7 +10,7 @@
 @import url('./form.css');
 
 :root {
-  --primary-color: #f78a0f;
+  --primary-color: #4a4e69;
   --text-color: #737373;
   --title-color: #241d19;
   --main-title-color: #797576;
@@ -42,4 +42,23 @@ body {
   height: 100vh;
 
   padding: 20px 15px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .printable-cv,
+  .printable-cv * {
+    visibility: visible;
+  }
+
+  .printable-cv {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    box-shadow: none;
+  }
 }
