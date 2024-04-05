@@ -1,9 +1,10 @@
 const colorPicker = document.querySelector('#color-picker');
 
-document.documentElement.style.setProperty(
-  '--primary-color',
-  colorPicker.value
-);
+const primaryColor = getComputedStyle(document.documentElement)
+  .getPropertyValue('--primary-color')
+  .trim();
+
+colorPicker.value = primaryColor;
 
 const onChange = e => {
   const color = e.currentTarget.value;
