@@ -19,9 +19,15 @@
 
 .job-name-input,
 .summary-input,
-.project-input {
+.project-input,
+.company-name-input {
   display: block;
   width: 100%;
+}
+
+.drag-handle {
+  cursor: grab;
+  margin-right: 10px;
 }
 
 .project-label {

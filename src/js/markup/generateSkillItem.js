@@ -1,7 +1,7 @@
-const generateSkillItem = (id, value = '') => {
+const generateSkillItem = (type, id, value = '') => {
   const listItem = document.createElement('li');
 
-  listItem.classList.add('skill-list-item');
+  listItem.classList.add('skill-list-item', `js-${type}-skill-item`);
   listItem.id = id;
   listItem.textContent = value;
 

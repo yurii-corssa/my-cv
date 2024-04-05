@@ -6,3 +6,5 @@ import './js/handleSummaryForm';
 import './js/handleProjectsForm';
 import './js/handleSkillsForm';
 import './js/handleColorPicker';
+import './js/handlePrint';
+import './js/handleDrag';
