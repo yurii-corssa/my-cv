@@ -18,11 +18,24 @@
   </div>
 
   <div class="main-forms">
-    <form class="job-name-form">
+    <form class="company-name-form js-company-name-form">
+      <label for="company-name-input" class="company-name-label"
+        >Company Name</label
+      >
+      <input
+        type="text"
+        class="company-name-input js-company-name-input"
+        name="companyName"
+        id="company-name-input"
+        placeholder="Enter company name"
+      />
+    </form>
+
+    <form class="job-name-form js-job-name-form">
       <label for="job-name-input" class="job-name-label">Job Name</label>
       <input
         type="text"
-        class="job-name-input"
+        class="job-name-input js-job-name-input"
         name="jobName"
         id="job-name-input"
         placeholder="Enter job name"
@@ -74,8 +87,9 @@
         name="accentColor"
         id="color-picker"
         class="color-picker"
-        value="#2e3440"
       />
     </form>
+
+    <button type="button" class="print-btn">Print CV</button>
   </div>
 </div>
