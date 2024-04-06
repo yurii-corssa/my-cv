@@ -11,184 +11,300 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,400&display=swap"
       rel="stylesheet"
     />
-    <title>My CV</title>
+    <title></title>
     
     <script type="module" crossorigin src="/my-cv/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/my-cv/assets/vendor-34f890c2.js">
-    <link rel="stylesheet" href="/my-cv/assets/index-3fba46c7.css">
+    <link rel="stylesheet" href="/my-cv/assets/index-23954d48.css">
   </head>
   <body>
-    <div class="printable-cv">
-  <div class="sidebar-content">
-    <div class="thumb section">
-      <img class="avatar" src="/my-cv/assets/avatar-0f16790a.jpg" alt="avatar" />
-    </div>
+    <main class="main">
+      <div class="cv-forms">
+  <div class="sidebar-forms">
+    <form class="tech-skills-form js-tech-form">
+      <label>Tech Skills</label>
+      <div class="js-tech-inputs-container" data-skill="tech"></div>
+      <button type="button" class="js-skills-btn">Add Skill</button>
+    </form>
 
-    <section class="contacts-section section">
-      <ul class="contacts-list">
-        <li class="contacts-list-item">
-          <svg class="contacts-list-icon">
-            <use href="/my-cv/assets/sprite-231218c6.svg#icon-call"></use>
-          </svg>
-          <div>
-            <a class="contacts-list-link" href="tel:+48517243808"
-              >+48 517 243 808</a
-            >
-            <p class="contacts-list-text">
-              <a
-                href="https://t.me/yurii_corssa"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Telegram</a
-              >
-              |
-              <a
-                href="https://wa.me/48517243808"
-                target="_blank"
-                rel="noopener noreferrer"
-                >WhatsApp</a
-              >
-            </p>
-          </div>
-        </li>
+    <form class="soft-skills-form js-soft-form">
+      <label>Soft Skills</label>
+      <div class="js-soft-inputs-container" data-skill="soft"></div>
+    </form>
 
-        <li class="contacts-list-item">
-          <svg class="contacts-list-icon">
-            <use href="/my-cv/assets/sprite-231218c6.svg#icon-mail"></use>
-          </svg>
-          <a class="contacts-list-link" href="mailto:yurii.corssa@gmail.com"
-            >yurii.corssa@gmail.com</a
-          >
-        </li>
-
-        <li class="contacts-list-item">
-          <svg class="contacts-list-icon">
-            <use href="/my-cv/assets/sprite-231218c6.svg#icon-linkedin"></use>
-          </svg>
-          <a
-            class="contacts-list-link"
-            href="https://www.linkedin.com/in/yurii-tsyhanok/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
-        </li>
-
-        <li class="contacts-list-item">
-          <svg class="contacts-list-icon">
-            <use href="/my-cv/assets/sprite-231218c6.svg#icon-github"></use>
-          </svg>
-          <a
-            class="contacts-list-link"
-            href="https://github.com/yurii-corssa"
-            target="_blank"
-            rel="noopener noreferrer"
-            >GitHub</a
-          >
-        </li>
-
-        <li class="contacts-list-item">
-          <svg class="contacts-list-icon">
-            <use href="/my-cv/assets/sprite-231218c6.svg#icon-location"></use>
-          </svg>
-          <div>
-            <a
-              class="contacts-list-link"
-              href="https://goo.gl/maps/LfFp3GBugDtKNqMz9"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Goleniow, Poland
-            </a>
-            <p class="contacts-list-text">(willing to relocate)</p>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <section class="tech-skills-section section">
-      <h2 class="title">Tech Skills</h2>
-
-      <ul class="skills-list js-tech-skills"></ul>
-    </section>
-
-    <section class="soft-skills-section section">
-      <h2 class="title">Soft Skills</h2>
-
-      <ul class="skills-list js-soft-skills"></ul>
-    </section>
-
-    <section class="languages-section section">
-      <h2 class="title">Languages</h2>
-
-      <ul class="skills-list js-languages"></ul>
-    </section>
+    <form class="languages-skills-form js-languages-form">
+      <label>Languages Skills</label>
+      <div class="js-languages-inputs-container" data-skill="languages"></div>
+    </form>
   </div>
 
-  <div class="main-content">
-    <section class="title-section section">
-      <h1 class="main-title">Yurii Tsyhanok</h1>
-      <h2 class="secondary-title title js-job-title"></h2>
-    </section>
+  <div class="main-forms">
+    <form class="company-name-form js-company-name-form">
+      <label for="company-name-input" class="company-name-label"
+        >Company Name</label
+      >
+      <input
+        type="text"
+        class="company-name-input js-company-name-input"
+        name="companyName"
+        id="company-name-input"
+        placeholder="Enter company name"
+      />
+    </form>
 
-    <section class="summary-section section">
-      <h2 class="title">Summary</h2>
-      <p class="summary-text js-summary"></p>
-    </section>
+    <form class="job-name-form js-job-name-form">
+      <label for="job-name-input" class="job-name-label">Job Name</label>
+      <input
+        type="text"
+        class="job-name-input js-job-name-input"
+        name="jobName"
+        id="job-name-input"
+        placeholder="Enter job name"
+      />
+    </form>
 
-    <section class="project-experience-section section">
-      <h2 class="title">Project Experience</h2>
-      <ul class="project-experience-list js-experience"></ul>
-    </section>
+    <form class="summary-form">
+      <label for="summary-select" class="summury-label">Summary</label>
+      <select name="summarySelect" id="summary-select" class="summary-input">
+        <option value="fullstack">Fullstack</option>
+        <option value="frontend" selected>Frontend</option>
+        <option value="backend" disabled>Backend</option>
+      </select>
+    </form>
 
-    <section class="work-experience-section section">
-      <h2 class="title">Work Experience</h2>
-      <ul class="work-experience-list">
-        <li class="work-experience-list-item">
-          <h3 class="subtitle">
-            Ceva Logistics | Warehouse Worker
-            <span class="period">(nov 2022 - today)</span>
-          </h3>
+    <form class="projects-form">
+      <label class="project-label">Projects</label>
 
-          <p class="work-experience-text">
-            Responsibilities: Sorting parcels by destination; Loading and
-            dispatching transportation; Control of compliance of sent parcels
-            with the system.
-          </p>
+      <select
+        name="projectList"
+        class="project-input js-project-select js-first"
+      ></select>
 
-          <p class="work-experience-text">
-            Achievement: Developed an app for efficient and fair employee
-            distribution in warehouse operations, automating work processes;
-            Implemented packaging process optimizations, resulting in
-            significant cost savings on shipping for the company.
-          </p>
-        </li>
-      </ul>
-    </section>
+      <select
+        name="projectList"
+        class="project-input js-project-select js-second"
+      ></select>
 
-    <div class="education-section section">
-      <h2 class="title">Education</h2>
-      <ul class="education-list">
-        <li class="education-list-item">
-          <h3 class="subtitle">
-            IT School GoIT | Full Stack Developer
-            <span class="period">(jan 2023 - dec 2023)</span>
-          </h3>
-          <p class="education-list-text">
-            Achievement: During a team project, I was selected by the team as
-            the Frontend Team Lead.
-          </p>
-        </li>
-        <li class="education-list-item">
-          <h3 class="subtitle">
-            Higher Vocational School of Shipbuilding | Shipbuilder
-            <span class="period">(sept 2009 - jun 2012)</span>
-          </h3>
-        </li>
-      </ul>
+      <select
+        name="projectList"
+        class="project-input js-project-select js-third"
+      ></select>
+
+      <select
+        name="projectList"
+        class="project-input js-project-select js-fourth"
+      ></select>
+
+      <select
+        name="projectList"
+        class="project-input js-project-select js-fifth"
+      ></select>
+    </form>
+
+    <form class="color-form">
+      <label for="color-input" class="color-label">Accent Color</label>
+      <input
+        type="color"
+        name="accentColor"
+        id="color-picker"
+        class="color-picker"
+      />
+    </form>
+
+    <button type="button" class="print-btn">Print CV</button>
+  </div>
+</div>
+
+      <div class="cv">
+  <div class="printable-cv">
+    <div class="sidebar-content">
+      <div class="thumb section">
+        <img class="avatar" src="/my-cv/assets/avatar-0f16790a.jpg" alt="avatar" />
+      </div>
+
+      <section class="contacts-section section">
+        <ul class="contacts-list">
+          <li class="contacts-list-item">
+            <svg class="contacts-list-icon">
+              <use href="/my-cv/assets/sprite-231218c6.svg#icon-call"></use>
+            </svg>
+            <div>
+              <a class="contacts-list-link" href="tel:+48517243808"
+                >+48 517 243 808</a
+              >
+              <p class="contacts-list-text">
+                <a
+                  href="https://t.me/yurii_corssa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Telegram</a
+                >
+                |
+                <a
+                  href="https://wa.me/48517243808"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >WhatsApp</a
+                >
+              </p>
+            </div>
+          </li>
+
+          <li class="contacts-list-item">
+            <svg class="contacts-list-icon">
+              <use href="/my-cv/assets/sprite-231218c6.svg#icon-mail"></use>
+            </svg>
+            <a class="contacts-list-link" href="mailto:yurii.corssa@gmail.com"
+              >yurii.corssa@gmail.com</a
+            >
+          </li>
+
+          <li class="contacts-list-item">
+            <svg class="contacts-list-icon">
+              <use href="/my-cv/assets/sprite-231218c6.svg#icon-linkedin"></use>
+            </svg>
+            <a
+              class="contacts-list-link"
+              href="https://www.linkedin.com/in/yurii-tsyhanok/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+
+          <li class="contacts-list-item">
+            <svg class="contacts-list-icon">
+              <use href="/my-cv/assets/sprite-231218c6.svg#icon-github"></use>
+            </svg>
+            <a
+              class="contacts-list-link"
+              href="https://github.com/yurii-corssa"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+
+          <li class="contacts-list-item">
+            <svg class="contacts-list-icon">
+              <use href="/my-cv/assets/sprite-231218c6.svg#icon-location"></use>
+            </svg>
+            <div>
+              <a
+                class="contacts-list-link"
+                href="https://goo.gl/maps/LfFp3GBugDtKNqMz9"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Goleniow, Poland
+              </a>
+              <p class="contacts-list-text">(willing to relocate)</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="tech-skills-section section">
+        <h2 class="title">Tech Skills</h2>
+
+        <ul class="skills-list js-tech-skills"></ul>
+      </section>
+
+      <section class="soft-skills-section section">
+        <h2 class="title">Soft Skills</h2>
+
+        <ul class="skills-list js-soft-skills"></ul>
+      </section>
+
+      <section class="languages-section section">
+        <h2 class="title">Languages</h2>
+
+        <ul class="skills-list js-languages"></ul>
+      </section>
+    </div>
+
+    <div class="main-content">
+      <section class="title-section section">
+        <h1 class="main-title js-main-title">Yurii Tsyhanok</h1>
+        <h2 class="secondary-title title js-job-title"></h2>
+      </section>
+
+      <section class="summary-section section">
+        <h2 class="title">Summary</h2>
+        <p class="summary-text js-summary"></p>
+      </section>
+
+      <section class="project-experience-section section">
+        <h2 class="title">Project Experience</h2>
+        <ul class="project-experience-list">
+          <li
+            class="project-experience-list-item js-project-item js-first"
+          ></li>
+          <li
+            class="project-experience-list-item js-project-item js-second"
+          ></li>
+          <li
+            class="project-experience-list-item js-project-item js-third"
+          ></li>
+          <li
+            class="project-experience-list-item js-project-item js-fourth"
+          ></li>
+          <li
+            class="project-experience-list-item js-project-item js-fifth"
+          ></li>
+        </ul>
+      </section>
+
+      <section class="work-experience-section section">
+        <h2 class="title">Work Experience</h2>
+        <ul class="work-experience-list">
+          <li class="work-experience-list-item">
+            <h3 class="subtitle">
+              Ceva Logistics | Warehouse Worker
+              <span class="period">(nov 2022 - today)</span>
+            </h3>
+
+            <p class="work-experience-text">
+              Responsibilities: Sorting parcels by destination; Loading and
+              dispatching transportation; Control of compliance of sent parcels
+              with the system.
+            </p>
+
+            <p class="work-experience-text">
+              Achievement: Developed an app for efficient and fair employee
+              distribution in warehouse operations, automating work processes;
+              Implemented packaging process optimizations, resulting in
+              significant cost savings on shipping for the company.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <div class="education-section section">
+        <h2 class="title">Education</h2>
+        <ul class="education-list">
+          <li class="education-list-item">
+            <h3 class="subtitle">
+              IT School GoIT | Full Stack Developer
+              <span class="period">(jan 2023 - dec 2023)</span>
+            </h3>
+            <p class="education-list-text">
+              Achievement: During a team project, I was selected by the team as
+              the Frontend Team Lead.
+            </p>
+          </li>
+          <li class="education-list-item">
+            <h3 class="subtitle">
+              Higher Vocational School of Shipbuilding | Shipbuilder
+              <span class="period">(sept 2009 - jun 2012)</span>
+            </h3>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
+    </main>
 
     
   </body>
