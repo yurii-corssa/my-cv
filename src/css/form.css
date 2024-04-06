@@ -20,7 +20,8 @@
 .job-name-input,
 .summary-input,
 .project-input,
-.company-name-input {
+.company-name-input,
+.color-picker {
   display: block;
   width: 100%;
 }
