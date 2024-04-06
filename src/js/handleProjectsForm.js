@@ -3,10 +3,6 @@ import { initialProjects } from './initialData';
 import generateProjectListMarkup from './markup/generateProjectListMarkup';
 import { getAllProjects } from './services/api';
 
-const projectSelectEl = document.querySelectorAll('.js-project-select');
-
-const projects = await getAllProjects();
-
 const handleChange = e => {
   const project = e.currentTarget;
   const value = project.value;
@@ -15,18 +11,24 @@ const handleChange = e => {
   createProject(value, position);
 };
 
-projectSelectEl.forEach((el, i) => {
-  const projectListMarkup = generateProjectListMarkup(
-    projects,
-    initialProjects[i]
-  );
+(async () => {
+  const projectSelectEl = document.querySelectorAll('.js-project-select');
 
-  el.innerHTML = projectListMarkup;
+  const projects = await getAllProjects();
 
-  const value = el.value;
-  const position = el.classList[el.classList.length - 1];
+  projectSelectEl.forEach((el, i) => {
+    const projectListMarkup = generateProjectListMarkup(
+      projects,
+      initialProjects[i]
+    );
 
-  createProject(value, position);
+    el.innerHTML = projectListMarkup;
 
-  el.addEventListener('change', handleChange);
-});
+    const value = el.value;
+    const position = el.classList[el.classList.length - 1];
+
+    createProject(value, position);
+
+    el.addEventListener('change', handleChange);
+  });
+})();
